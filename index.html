@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Notice — Elara</title>
+<meta name="description" content="Elara's privacy notice: what data we collect, why, and your rights." />
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --ink: #17121C;
+    --subtle: #6B6470;
+    --faint: #948C9C;
+    --brand: #4B2E92;
+    --wash-1: #F1DFEC;
+    --wash-2: #EACDE7;
+    --wash-3: #E1BEE0;
+    --border: rgba(23,18,28,0.10);
+    --toc-bg: rgba(234,205,231,0.16);
+    --code-bg: rgba(23,18,28,0.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121016;
+      --ink: #F3EEF5;
+      --subtle: #B7ADC0;
+      --faint: #8B8294;
+      --brand: #C9AEFF;
+      --wash-1: #2A2233;
+      --wash-2: #352845;
+      --wash-3: #3E2A52;
+      --border: rgba(255,255,255,0.12);
+      --toc-bg: rgba(255,255,255,0.04);
+      --code-bg: rgba(255,255,255,0.05);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .serif {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    font-weight: 600;
+  }
+
+  header.hero {
+    background: linear-gradient(160deg, var(--wash-1), var(--wash-2) 55%, var(--wash-3));
+    padding: 4.5rem 1.5rem 3.5rem;
+  }
+
+  .hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #17121C;
+    margin-bottom: 2.2rem;
+  }
+  .mark svg { display: block; }
+  .mark span {
+    font-family: Georgia, "Iowan Old Style", serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+  }
+
+  h1.title {
+    font-size: clamp(2.1rem, 5vw, 2.85rem);
+    line-height: 1.12;
+    margin: 0 0 0.9rem;
+    color: #17121C;
+    text-wrap: balance;
+  }
+
+  .hero-meta {
+    color: #4A3D52;
+    font-size: 0.92rem;
+    margin: 0 0 1.6rem;
+  }
+
+  .hero-lede {
+    color: #2A2130;
+    font-size: 1.05rem;
+    max-width: 62ch;
+    margin: 0;
+  }
+  .hero-lede a { color: #3A1F7A; }
+
+  .layout {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 700px);
+    gap: 3rem;
+    justify-content: center;
+    align-items: start;
+  }
+
+  nav.toc {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+  }
+
+  nav.toc .toc-label {
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: toc;
+    border-left: 1px solid var(--border);
+  }
+
+  nav.toc li {
+    counter-increment: toc;
+  }
+
+  nav.toc a {
+    display: block;
+    padding: 0.4rem 0 0.4rem 0.9rem;
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    color: var(--subtle);
+    text-decoration: none;
+    font-size: 0.86rem;
+    line-height: 1.35;
+  }
+  nav.toc a:hover,
+  nav.toc a:focus-visible {
+    color: var(--brand);
+    border-left-color: var(--brand);
+  }
+
+  details.toc-mobile {
+    display: none;
+    margin: 0 0 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    background: var(--toc-bg);
+  }
+  details.toc-mobile summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  details.toc-mobile ol {
+    margin: 0.9rem 0 0.2rem;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+  }
+  details.toc-mobile li { margin-bottom: 0.45rem; }
+  details.toc-mobile a { color: var(--brand); text-decoration: none; }
+
+  main {
+    min-width: 0;
+    max-width: 700px;
+  }
+
+  main > .summary-block {
+    background: var(--toc-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem 1.7rem;
+    margin-bottom: 3rem;
+  }
+  .summary-block h2 {
+    margin-top: 0;
+  }
+  .summary-block dt {
+    font-weight: 700;
+    margin-top: 1.1rem;
+    font-size: 0.98rem;
+  }
+  .summary-block dt:first-of-type { margin-top: 0; }
+  .summary-block dd {
+    margin: 0.3rem 0 0;
+    color: var(--subtle);
+    font-size: 0.95rem;
+  }
+
+  section {
+    margin-bottom: 2.9rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.32rem;
+    margin: 0 0 0.3rem;
+    text-wrap: balance;
+  }
+
+  .in-short {
+    color: var(--subtle);
+    font-style: italic;
+    font-size: 0.98rem;
+    margin: 0 0 1.1rem;
+  }
+
+  section h3 {
+    font-size: 1.02rem;
+    margin: 1.6rem 0 0.5rem;
+  }
+
+  p { margin: 0 0 1rem; }
+  ul, ol.plain { margin: 0 0 1rem; padding-left: 1.3rem; }
+  li { margin-bottom: 0.4rem; }
+
+  a { color: var(--brand); }
+
+  hr.div {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.6rem 0;
+  }
+
+  .table-wrap { overflow-x: auto; margin: 1rem 0 1.4rem; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9rem;
+    min-width: 480px;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--subtle); }
+  td.yes { color: var(--brand); font-weight: 600; }
+  td.no { color: var(--faint); }
+
+  address { font-style: normal; }
+
+  .back-to-top {
+    position: fixed;
+    right: 1.4rem;
+    bottom: 1.4rem;
+    background: var(--brand);
+    color: var(--bg);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.55rem 0.95rem;
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  }
+  .back-to-top.show { opacity: 1; pointer-events: auto; }
+
+  @media (max-width: 880px) {
+    .layout { grid-template-columns: minmax(0, 1fr); padding-top: 2rem; }
+    nav.toc { display: none; }
+    details.toc-mobile { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<a id="top"></a>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="mark">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <path d="M11 21c-.6-4.8-1.4-7.4-3-9.5C6.4 9.4 4 8.4 1.5 8c2.3-1.6 4.6-1.8 6.8-.6C10.3 8.4 11 10.4 11 13c0-2.6.7-4.6 2.7-5.6 2.2-1.2 4.5-1 6.8.6-2.5.4-4.9 1.4-6.5 3.5-1.6 2.1-2.4 4.7-3 9.5z" fill="#3A1F7A" opacity="0.85"/>
+      </svg>
+      <span>Elara</span>
+    </div>
+    <p class="eyebrow" style="color:#4A3D52; margin-bottom:0.7rem;">Legal</p>
+    <h1 class="title serif">Privacy Notice</h1>
+    <p class="hero-meta">Last revised as shown below · Applies to the Elara mobile app and related Services</p>
+    <p class="hero-lede">
+      This notice describes how we access, collect, store, use, and share your personal information when you use Elara. If you don't agree with our practices, please don't use the Services. Questions? Email
+      <a href="mailto:Elaraappcontact@gmail.com">Elaraappcontact@gmail.com</a>.
+    </p>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Table of contents">
+    <span class="eyebrow toc-label">On this page</span>
+    <ol>
+      <li><a href="#what-we-collect">What information do we collect?</a></li>
+      <li><a href="#how-we-process">How do we process your information?</a></li>
+      <li><a href="#legal-bases">What legal bases do we rely on?</a></li>
+      <li><a href="#share-info">When and with whom do we share information?</a></li>
+      <li><a href="#international">Is your information transferred internationally?</a></li>
+      <li><a href="#retention">How long do we keep your information?</a></li>
+      <li><a href="#safety">How do we keep your information safe?</a></li>
+      <li><a href="#minors">Do we collect information from minors?</a></li>
+      <li><a href="#your-rights">What are your privacy rights?</a></li>
+      <li><a href="#dnt">Controls for Do-Not-Track features</a></li>
+      <li><a href="#us-rights">Do US residents have specific rights?</a></li>
+      <li><a href="#other-regions">Do other regions have specific rights?</a></li>
+      <li><a href="#personalization">Conversation data collection and usage</a></li>
+      <li><a href="#updates">Do we make updates to this notice?</a></li>
+      <li><a href="#contact">How can you contact us?</a></li>
+      <li><a href="#review">Review, update, or delete your data</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <details class="toc-mobile">
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#what-we-collect">What information do we collect?</a></li>
+        <li><a href="#how-we-process">How do we process your information?</a></li>
+        <li><a href="#legal-bases">What legal bases do we rely on?</a></li>
+        <li><a href="#share-info">When and with whom do we share information?</a></li>
+        <li><a href="#international">Is your information transferred internationally?</a></li>
+        <li><a href="#retention">How long do we keep your information?</a></li>
+        <li><a href="#safety">How do we keep your information safe?</a></li>
+        <li><a href="#minors">Do we collect information from minors?</a></li>
+        <li><a href="#your-rights">What are your privacy rights?</a></li>
+        <li><a href="#dnt">Controls for Do-Not-Track features</a></li>
+        <li><a href="#us-rights">Do US residents have specific rights?</a></li>
+        <li><a href="#other-regions">Do other regions have specific rights?</a></li>
+        <li><a href="#personalization">Conversation data collection and usage</a></li>
+        <li><a href="#updates">Do we make updates to this notice?</a></li>
+        <li><a href="#contact">How can you contact us?</a></li>
+        <li><a href="#review">Review, update, or delete your data</a></li>
+      </ol>
+    </details>
+
+    <div class="summary-block">
+      <h2 class="serif" style="font-size:1.15rem;">Summary of key points</h2>
+      <dl>
+        <dt>What personal information do we process?</dt>
+        <dd>When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us, the choices you make, and the products and features you use.</dd>
+
+        <dt>Do we process any sensitive personal information?</dt>
+        <dd>We do not process sensitive personal information.</dd>
+
+        <dt>Do we collect any information from third parties?</dt>
+        <dd>We do not collect any information from third parties.</dd>
+
+        <dt>How do we process your information?</dt>
+        <dd>To provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law — and for other purposes only with your consent. We process information only when we have a valid legal reason to do so.</dd>
+
+        <dt>In what situations and with which parties do we share information?</dt>
+        <dd>We may share information in specific situations and with specific categories of third parties — see "When and with whom do we share information?"</dd>
+
+        <dt>How do we keep your information safe?</dt>
+        <dd>We have organizational and technical processes in place to protect your personal information, though no method of transmission or storage can be guaranteed 100% secure.</dd>
+
+        <dt>What are your rights?</dt>
+        <dd>Depending on where you're located, applicable privacy law may give you certain rights regarding your personal information.</dd>
+
+        <dt>How do you exercise your rights?</dt>
+        <dd>The easiest way is contacting us at <a href="mailto:Elaraappcontact@gmail.com">Elaraappcontact@gmail.com</a>. We act on requests in accordance with applicable data protection laws.</dd>
+      </dl>
+    </div>
+
+    <section id="what-we-collect">
+      <h2 class="serif">What information do we collect?</h2>
+
+      <h3>Personal information you disclose to us</h3>
+      <p class="in-short">In short: We collect personal information that you provide to us.</p>
+      <p>We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.</p>
+      <p><strong>Personal information provided by you.</strong> The personal information we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. It may include: names, birth information, personal relationships, personal goals and aspirations, emotional and mental wellness intentions, spiritual or manifestation preferences, lifestyle details, and any other information you voluntarily provide through in-app questionnaires or prompts to personalize your experience.</p>
+      <p><strong>Sensitive information.</strong> Depending on what you choose to share, some data may be considered sensitive under certain jurisdictions, such as information relating to religious or spiritual beliefs or health and wellness goals. We process this information only as voluntarily provided by you and solely to personalize your experience.</p>
+      <p><strong>Payment data.</strong> We may collect data necessary to process your payment if you choose to make purchases, such as your payment instrument number and the associated security code. All payment data is handled and stored by Apple — see their <a href="https://www.apple.com/legal/privacy/data/en/app-store/" target="_blank" rel="noopener">privacy notice</a>.</p>
+      <p><strong>Application data.</strong> If you use our application(s), we may also collect the following if you choose to provide access or permission:</p>
+      <ul>
+        <li><strong>Mobile device access.</strong> We may request access to certain features on your device, including reminders and other features. You can change our access in your device's settings.</li>
+        <li><strong>Mobile device data.</strong> We automatically collect device information (mobile device ID, model, manufacturer), operating system and version, system configuration, device and application identification numbers, browser type and version, hardware model, internet service provider and/or mobile carrier, and IP address (or proxy server). We may also collect phone network information, platform, device type, unique device ID, and which application features you accessed.</li>
+        <li><strong>Push notifications.</strong> We may request to send push notifications about your account or certain features. You can turn these off in your device's settings.</li>
+      </ul>
+      <p>This information is primarily needed to maintain the security and operation of our application(s), for troubleshooting, and for internal analytics and reporting.</p>
+      <p>All personal information you provide to us must be true, complete, and accurate, and you must notify us of any changes to it.</p>
+
+      <h3>Information automatically collected</h3>
+      <p class="in-short">In short: Some information — such as your IP address and/or browser and device characteristics — is collected automatically when you use our Services.</p>
+      <p>This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, and information about how and when you use our Services. It's primarily needed to maintain the security and operation of our Services and for internal analytics and reporting.</p>
+      <ul>
+        <li><strong>Log and usage data.</strong> Service-related, diagnostic, usage, and performance information our servers automatically collect and record in log files — IP address, device information, browser type and settings, activity in the Services (timestamps, pages/files viewed, searches, features used), and device event information (system activity, crash dumps, hardware settings).</li>
+        <li><strong>Device data.</strong> Information about the computer, phone, tablet, or other device you use to access the Services — IP address (or proxy server), device and application identification numbers, location, browser type, hardware model, internet service provider and/or mobile carrier, operating system, and system configuration.</li>
+      </ul>
+    </section>
+
+    <section id="how-we-process">
+      <h2 class="serif">How do we process your information?</h2>
+      <p class="in-short">In short: We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law.</p>
+      <p>We process the personal information for the following purposes, and may also process it for other purposes only with your prior explicit consent:</p>
+      <ul>
+        <li><strong>To deliver and facilitate delivery of services to the user.</strong> We may process your information to provide you with the requested service.</li>
+        <li><strong>To save or protect an individual's vital interest.</strong> We may process your information when necessary to save or protect an individual's vital interest, such as to prevent harm.</li>
+      </ul>
+    </section>
+
+    <section id="legal-bases">
+      <h2 class="serif">What legal bases do we rely on to process your information?</h2>
+      <p class="in-short">In short: We only process your personal information when we believe it is necessary and we have a valid legal reason to do so — like your consent, compliance with laws, fulfilling contractual obligations, protecting your rights, or our legitimate business interests.</p>
+
+      <h3>If you are located in the EU or UK</h3>
+      <p>The GDPR and UK GDPR require us to explain the valid legal bases we rely on to process your personal information:</p>
+      <ul>
+        <li><strong>Consent.</strong> We may process your information if you've given us permission for a specific purpose. You can withdraw your consent at any time.</li>
+        <li><strong>Performance of a contract.</strong> We may process your information when necessary to fulfill our contractual obligations to you, including providing our Services, or at your request prior to entering into a contract.</li>
+        <li><strong>Legal obligations.</strong> Where necessary for compliance with our legal obligations, such as cooperating with a law enforcement body or regulatory agency, exercising or defending our legal rights, or disclosing information as evidence in litigation.</li>
+        <li><strong>Vital interests.</strong> Where necessary to protect your vital interests or those of a third party, such as situations involving potential threats to safety.</li>
+      </ul>
+
+      <h3>If you are located in Canada</h3>
+      <p>We may process your information if you've given specific permission (express consent), or where your permission can be inferred (implied consent). You can withdraw your consent at any time.</p>
+      <p>In some exceptional cases, we may be legally permitted to process your information without consent, including:</p>
+      <ul>
+        <li>If collection is clearly in an individual's interest and consent cannot be obtained in a timely way</li>
+        <li>For investigations and fraud detection and prevention</li>
+        <li>For business transactions, provided certain conditions are met</li>
+        <li>If contained in a witness statement necessary to assess, process, or settle an insurance claim</li>
+        <li>For identifying injured, ill, or deceased persons and communicating with next of kin</li>
+        <li>If we have reasonable grounds to believe an individual has been, is, or may be a victim of financial abuse</li>
+        <li>Where obtaining consent would compromise the availability or accuracy of information, and collection is reasonable for investigating a breach of an agreement or Canadian/provincial law</li>
+        <li>If disclosure is required to comply with a subpoena, warrant, court order, or court rules relating to production of records</li>
+        <li>If produced by an individual in the course of their employment, business, or profession, consistent with the purposes for which it was produced</li>
+        <li>If collection is solely for journalistic, artistic, or literary purposes</li>
+        <li>If the information is publicly available and specified by regulation</li>
+      </ul>
+      <p>We may disclose de-identified information for approved research or statistics projects, subject to ethics oversight and confidentiality commitments.</p>
+    </section>
+
+    <section id="share-info">
+      <h2 class="serif">When and with whom do we share your personal information?</h2>
+      <p class="in-short">In short: We may share information in specific situations described in this section and/or with the following categories of third parties.</p>
+      <p><strong>Vendors, consultants, and other third-party service providers.</strong> We may share your data with third parties who perform services for us or on our behalf and require access to do that work. We have contracts in place designed to safeguard your personal information — they cannot do anything with it beyond our instructions, will not share it with anyone apart from us, and commit to protecting it and retaining it only for the period we instruct.</p>
+      <p>Categories of third parties we may share personal information with:</p>
+      <ul>
+        <li>Data analytics services</li>
+        <li>Cloud computing services</li>
+        <li>AI and machine learning service providers</li>
+        <li>Audio generation services</li>
+      </ul>
+      <p>We may also need to share your information in these situations:</p>
+      <ul>
+        <li><strong>Business transfers.</strong> In connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or part of our business.</li>
+        <li><strong>Affiliates.</strong> With our affiliates, who will be required to honor this Privacy Notice — including our parent company, subsidiaries, joint venture partners, or other companies under common control with us.</li>
+        <li><strong>Business partners.</strong> To offer you certain products, services, or promotions.</li>
+      </ul>
+    </section>
+
+    <section id="international">
+      <h2 class="serif">Is your information transferred internationally?</h2>
+      <p>If you're a resident of the European Economic Area (EEA), United Kingdom (UK), or Switzerland, those countries may not necessarily have data protection laws as comprehensive as those in your country. We take all necessary measures to protect your personal information in accordance with this Privacy Notice and applicable law.</p>
+      <p><strong>European Commission's Standard Contractual Clauses.</strong> We've implemented measures including the European Commission's Standard Contractual Clauses for transfers between our group companies and between us and third-party providers. These clauses require all recipients to protect personal information originating from the EEA or UK in accordance with European data protection laws. Our Standard Contractual Clauses can be provided upon request, as can further details on the safeguards implemented with our third-party service providers and partners.</p>
+    </section>
+
+    <section id="retention">
+      <h2 class="serif">How long do we keep your information?</h2>
+      <p class="in-short">In short: We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice, unless otherwise required by law.</p>
+      <p>We will only keep your personal information for as long as necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).</p>
+      <p>When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize it, or — if that isn't possible, for example because it's stored in backup archives — securely store it and isolate it from further processing until deletion is possible.</p>
+    </section>
+
+    <section id="safety">
+      <h2 class="serif">How do we keep your information safe?</h2>
+      <p class="in-short">In short: We aim to protect your personal information through a system of organizational and technical security measures.</p>
+      <p>We've implemented appropriate and reasonable technical and organizational security measures designed to protect any personal information we process. However, no electronic transmission over the internet or information storage technology can be guaranteed 100% secure, so we cannot promise that hackers, cybercriminals, or other unauthorized parties won't be able to defeat our security. Transmission of personal information to and from our Services is at your own risk — please only access the Services within a secure environment.</p>
+    </section>
+
+    <section id="minors">
+      <h2 class="serif">Do we collect information from minors?</h2>
+      <p class="in-short">In short: We do not knowingly collect data from or market to children under 18, or the equivalent age specified by law in your jurisdiction.</p>
+      <p>By using the Services, you represent that you're at least 18 (or the equivalent age in your jurisdiction), or that you're the parent or guardian of such a minor and consent to their use of the Services. If we learn that we've collected personal information from users under 18, we'll deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under 18, please contact us at <a href="mailto:Elaraappcontact@gmail.com">Elaraappcontact@gmail.com</a>.</p>
+    </section>
+
+    <section id="your-rights">
+      <h2 class="serif">What are your privacy rights?</h2>
+      <p class="in-short">In short: Depending on your state of residence in the US, or in regions like the EEA, UK, Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information.</p>
+      <p>You may review, change, or terminate your account at any time, depending on your country, province, or state of residence. In some regions you have certain rights under applicable data protection laws, which may include the right to:</p>
+      <ul>
+        <li>Request access to and obtain a copy of your personal information</li>
+        <li>Request rectification or erasure</li>
+        <li>Restrict the processing of your personal information</li>
+        <li>Data portability, if applicable</li>
+        <li>Not be subject to automated decision-making — if a decision producing legal or similarly significant effects is made solely by automated means, we'll inform you, explain the main factors, and offer a simple way to request human review</li>
+      </ul>
+      <p>In certain circumstances you may also have the right to object to processing. You can make such a request using the contact details in "How can you contact us?" below — we'll consider and act on it in accordance with applicable data protection laws.</p>
+      <p>If you're in the EEA or UK and believe we're unlawfully processing your personal information, you have the right to complain to your Member State or UK data protection authority. If you're in Switzerland, you may contact the Federal Data Protection and Information Commissioner.</p>
+      <p><strong>Withdrawing your consent.</strong> Where we rely on your consent (express and/or implied, depending on applicable law) to process your personal information, you have the right to withdraw it at any time using the contact details below. This won't affect the lawfulness of processing before withdrawal, nor — where applicable law allows — processing conducted in reliance on lawful grounds other than consent.</p>
+      <p>Questions or comments about your privacy rights? Email <a href="mailto:Elaraappcontact@gmail.com">Elaraappcontact@gmail.com</a>.</p>
+    </section>
+
+    <section id="dnt">
+      <h2 class="serif">Controls for Do-Not-Track features</h2>
+      <p>Most web browsers and some mobile operating systems and applications include a Do-Not-Track ("DNT") feature or setting you can activate to signal your preference not to have your online browsing activity monitored and collected. No uniform technology standard for recognizing and implementing DNT signals has been finalized, so we do not currently respond to DNT browser signals or any other mechanism that automatically communicates a choice not to be tracked online. If a standard is adopted that we must follow, we'll inform you in a revised version of this Privacy Notice. California law requires us to disclose how we respond to web browser DNT signals — because no industry or legal standard currently exists, we do not respond to them at this time.</p>
+    </section>
+
+    <section id="us-rights">
+      <h2 class="serif">Do United States residents have specific privacy rights?</h2>
+      <p class="in-short">In short: If you're a resident of California, Connecticut, Colorado, Utah, or Virginia, you may have the right to request access to and details about the personal information we maintain about you, correct inaccuracies, get a copy of, or delete it — and to withdraw your consent to our processing of it. These rights may be limited in some circumstances by applicable law.</p>
+
+      <h3>Categories of personal information we collect</h3>
+      <p>The table below shows categories of personal information we've collected in the past twelve months. It includes illustrative examples and does not reflect the personal information we collect from you specifically — for a comprehensive inventory, see "What information do we collect?" above.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Category</th><th>Examples</th><th>Collected</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>A. Identifiers</td><td>Real name, alias, postal address, telephone or mobile contact number, unique personal identifier, online identifier, IP address, email address, account name</td><td class="yes">Yes</td></tr>
+            <tr><td>B. Personal info under CA Customer Records statute</td><td>Name, contact information, education, employment, employment history, financial information</td><td class="yes">Yes</td></tr>
+            <tr><td>C. Protected classification characteristics</td><td>Gender, age, date of birth, race and ethnicity, national origin, marital status, other demographic data</td><td class="yes">Yes</td></tr>
+            <tr><td>D. Commercial information</td><td>Transaction information, purchase history, financial details, payment information</td><td class="no">No</td></tr>
+            <tr><td>E. Biometric information</td><td>Fingerprints and voiceprints</td><td class="no">No</td></tr>
+            <tr><td>F. Internet or network activity</td><td>Browsing history, search history, online behavior, interactions with our and other apps/sites</td><td class="no">No</td></tr>
+            <tr><td>G. Geolocation data</td><td>Device location</td><td class="no">No</td></tr>
+            <tr><td>H. Audio, electronic, sensory information</td><td>Images, audio, video, or call recordings created in connection with our business activities</td><td class="no">No</td></tr>
+            <tr><td>I. Professional or employment information</td><td>Business contact details, job title, work history, professional qualifications (e.g. if applying for a job with us)</td><td class="yes">Yes</td></tr>
+            <tr><td>J. Education information</td><td>Student records and directory information</td><td class="yes">Yes</td></tr>
+            <tr><td>K. Inferences</td><td>Inferences drawn from collected personal information to create a profile of preferences and characteristics</td><td class="no">No</td></tr>
+            <tr><td>L. Sensitive personal information</td><td>&mdash;</td><td class="no">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>We may also collect personal information outside these categories through in-person, online, phone, or mail interactions in the context of: receiving help through customer support, participating in surveys or contests, and facilitating delivery of our Services and responding to inquiries.</p>
+      <p>We use and retain collected personal information as needed to provide the Services, or for Categories A, B, C, I, and J: until a user requests we delete this information.</p>
+
+      <h3>Will your information be shared with anyone else?</h3>
+      <p>We may disclose your personal information to our service providers pursuant to a written contract between us and each provider — see "When and with whom do we share your personal information?" above.</p>
+      <p>We may use your personal information for our own business purposes, such as internal research for technological development and demonstration — this is not considered "selling" your personal information.</p>
+      <p>We have not sold or shared any personal information to third parties for a business or commercial purpose in the preceding twelve months. The categories of third parties to whom we've disclosed personal information for a business or commercial purpose in that period can be found under "When and with whom do we share your personal information?" above.</p>
+
+      <h3>Your rights</h3>
+      <p>You have rights under certain US state data protection laws, though they're not absolute — in certain cases we may decline your request as permitted by law. These include the right to:</p>
+      <ul>
+        <li>Know whether or not we're processing your personal data</li>
+        <li>Access your personal data</li>
+        <li>Correct inaccuracies in your personal data</li>
+        <li>Request deletion of your personal data</li>
+        <li>Obtain a copy of the personal data you previously shared with us</li>
+        <li>Non-discrimination for exercising your rights</li>
+        <li>Opt out of processing for targeted advertising (or sharing, as defined under California law), sale of personal data, or profiling in furtherance of decisions producing legal or similarly significant effects</li>
+      </ul>
+      <p>Depending on your state, you may also have the right to obtain a list of categories of third parties we've disclosed personal data to, and to limit use and disclosure of sensitive personal data (as permitted by applicable law, including in California).</p>
+
+      <h3>How to exercise your rights</h3>
+      <p>To exercise these rights, contact us by emailing <a href="mailto:Elaraappcontact@gmail.com">Elaraappcontact@gmail.com</a>, or via the contact details at the bottom of this document.</p>
+      <p>Under certain US state data protection laws, you can designate an authorized agent to make a request on your behalf. We may deny a request from an agent who doesn't submit proof of valid authorization.</p>
+      <p><strong>Request verification.</strong> Upon receiving your request, we'll need to verify your identity to confirm you're the person about whom we hold information. We'll only use information provided in your request for verification or security/fraud-prevention purposes, and may request additional information if we can't otherwise verify your identity. If submitted through an authorized agent, we may need additional information to verify your identity, and the agent will need to provide your written, signed permission.</p>
+      <p><strong>Appeals.</strong> Under certain US state data protection laws, if we decline to act on your request, you may appeal by emailing <a href="mailto:Elaraappcontact@gmail.com">Elaraappcontact@gmail.com</a>. We'll inform you in writing of any action taken or not taken, including a written explanation of the reasons. If your appeal is denied, you may submit a complaint to your state attorney general.</p>
+
+      <h3>California "Shine the Light" law</h3>
+      <p>California Civil Code Section 1798.83 permits California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes, and the names and addresses of those third parties, for the immediately preceding calendar year. To make such a request, please submit it in writing using the contact details in "How can you contact us?" below.</p>
+    </section>
+
+    <section id="other-regions">
+      <h2 class="serif">Do other regions have specific privacy rights?</h2>
+      <p class="in-short">In short: You may have additional rights based on the country you reside in.</p>
+
+      <h3>Australia and New Zealand</h3>
+      <p>We collect and process your personal information under the obligations and conditions set by Australia's Privacy Act 1988 and New Zealand's Privacy Act 2020. This Privacy Notice satisfies the notice requirements defined in both Acts, in particular what personal information we collect, from which sources, for which purposes, and other recipients of it.</p>
+      <p>If you don't wish to provide the personal information necessary to fulfill an applicable purpose, it may affect our ability to offer you the products or services you want, or to respond to or help with your requests.</p>
+      <p>You have the right, at any time, to request access to or correction of your personal information — see "How can you review, update, or delete the data we collect from you?" below. If you believe we're unlawfully processing your personal information, you have the right to complain to the Office of the Australian Information Commissioner, or the Office of New Zealand Privacy Commissioner.</p>
+
+      <h3>Republic of South Africa</h3>
+      <p>You have the right, at any time, to request access to or correction of your personal information — see "How can you review, update, or delete the data we collect from you?" below.</p>
+      <p>If you're unsatisfied with how we've addressed a complaint regarding our processing of personal information, you can contact The Information Regulator (South Africa):</p>
+      <ul>
+        <li>General enquiries: <a href="mailto:enquiries@inforegulator.org.za">enquiries@inforegulator.org.za</a></li>
+        <li>Complaints (complete POPIA/PAIA form 5): <a href="mailto:PAIAComplaints@inforegulator.org.za">PAIAComplaints@inforegulator.org.za</a> &amp; <a href="mailto:POPIAComplaints@inforegulator.org.za">POPIAComplaints@inforegulator.org.za</a></li>
+      </ul>
+    </section>
+
+    <section id="personalization">
+      <h2 class="serif">User data collection and usage for personalization</h2>
+      <p>To generate personalized audio content, we collect information you voluntarily provide through in-app questionnaires, preference selections, free-text prompts, and other input methods. This may include your personal goals, intentions, affirmations, and other details you share to tailor your experience. We use this data to generate and deliver personalized audio content to you within the app, and may also use it in aggregate or de-identified form to improve our personalization algorithms and develop new features.</p>
+      <p>All user-provided data is processed and stored using encryption in transit and at rest, with access restricted to systems and personnel required to deliver and maintain the Service.</p>
+    </section>
+
+    <section id="updates">
+      <h2 class="serif">Do we make updates to this notice?</h2>
+      <p class="in-short">In short: Yes, we'll update this notice as necessary to stay compliant with relevant laws.</p>
+      <p>We may update this Privacy Notice from time to time. The updated version will be indicated by an updated "Revised" date at the top. If we make material changes, we may notify you by prominently posting a notice or directly sending you a notification. We encourage you to review this notice frequently to stay informed of how we're protecting your information.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="serif">How can you contact us about this notice?</h2>
+      <p>If you have questions or comments about this notice, you may email us at <a href="mailto:Elaraappcontact@gmail.com">Elaraappcontact@gmail.com</a>.</p>
+    </section>
+
+    <section id="review">
+      <h2 class="serif">How can you review, update, or delete the data we collect from you?</h2>
+      <p>Based on the applicable laws of your country or US state of residence, you may have the right to request access to the personal information we collect from you, details about how we've processed it, correct inaccuracies, or delete it. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law.</p>
+      <p>To request to review, update, or delete your personal information, please email <a href="mailto:Elaraappcontact@gmail.com">Elaraappcontact@gmail.com</a>.</p>
+    </section>
+
+    <hr class="div" />
+    <p style="color:var(--faint); font-size:0.85rem;">© Elara. This page is provided for informational purposes and reflects the Privacy Notice text supplied for the Elara app.</p>
+  </main>
+</div>
+
+<a href="#top" class="back-to-top" id="backToTop">Back to top</a>
+
+<script>
+  (function () {
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 480) btn.classList.add('show');
+      else btn.classList.remove('show');
+    }, { passive: true });
+  })();
+</script>
+</body>
+</html>
